@@ -1,6 +1,6 @@
 from neo4j import GraphDatabase
 
-class HelloWorldExample:
+class StudentDB:
 
     def __init__(self, uri, user, password):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
@@ -27,7 +27,7 @@ class HelloWorldExample:
 
 
 if __name__ == "__main__":
-    greeter = HelloWorldExample("bolt://localhost:7687", "neo4j", "2509")
+    greeter = StudentDB("bolt://localhost:7687", "neo4j", "2509")
     # Print Database name
     while True:
         print("Enter the name of the student")
